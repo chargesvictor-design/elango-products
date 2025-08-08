@@ -8,9 +8,17 @@
         "distDir": "build",
         "framework": "create-react-app"
       }
+    },
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
     {
       "src": "/static/(.*)",
       "dest": "/static/$1"
