@@ -139,7 +139,7 @@ const Home = () => {
         ref={heroRef}
         className="relative bg-gradient-to-br from-primary-50 via-orange-50 to-yellow-50 py-20 px-4 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[url('/images/spices-pattern.png')] opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-100/20 to-yellow-100/20 opacity-50"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="hero-title font-serif text-5xl md:text-7xl font-bold text-gray-800 mb-6">
             <span className="bg-gradient-to-r from-primary-600 to-orange-600 bg-clip-text text-transparent">

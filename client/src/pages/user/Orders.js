@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useAuth } from '../../context/AuthContext';
-import { orderAPI } from '../../utils/api';
+import { ordersAPI } from '../../utils/api';
 import {
   ShoppingBagIcon,
   ClockIcon,
@@ -77,7 +77,7 @@ const Orders = () => {
   const fetchUserOrders = async () => {
     try {
       setLoading(true);
-      const response = await orderAPI.getUserOrders();
+      const response = await ordersAPI.getMyOrders();
       setOrders(response.data);
     } catch (err) {
       setError('Failed to load orders');

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
-import { adminAPI, productAPI, categoryAPI } from '../../utils/api';
+import { adminAPI, productsAPI, categoriesAPI } from '../../utils/api';
 import {
   PlusIcon,
   PencilIcon,
@@ -64,7 +64,7 @@ const AdminProducts = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await productAPI.getAllProducts();
+      const response = await adminAPI.getAllProducts();
       setProducts(response.data);
     } catch (err) {
       setError('Failed to load products');
@@ -76,7 +76,7 @@ const AdminProducts = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await categoryAPI.getAllCategories();
+      const response = await categoriesAPI.getAll();
       setCategories(response.data);
     } catch (err) {
       console.error('Categories error:', err);
